@@ -1,0 +1,12 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<button type="button">채용공고</button>
+{% for s in data %}
+        {{ s.text1}}
+        {{ s.text2 }}
+        {{ s.id }}
+    {% endfor %}
+{% endblock content %}

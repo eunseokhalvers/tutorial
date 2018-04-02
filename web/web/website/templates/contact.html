@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.center {
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 500px;
+}
+
+</style>
+</head>
+<body>
+
+<h3 style="text-align: center">큐리어슬리에 연락주세요</h3>
+
+<div class="container">
+  <form method="POST">
+    {% csrf_token %}
+    <label for="fname">이름 또는 소속업체</label>
+    <input type="text" name= "name">
+
+    <label for="lname">이메일 주소</label>
+    <input type="text" name= "email">
+
+    <label for="lname">전화번호</label>
+    <input type="text" name= "phone">
+
+    <label for="subject">메세지 내용</label>
+    <textarea id="subject" name= "message"  style="height:200px"></textarea>
+
+    <input type="submit" value="보내기" class="center" style="width: 200px">
+
+  </form>
+</div>
+
+</body>
+</html>
+{% endblock content %}

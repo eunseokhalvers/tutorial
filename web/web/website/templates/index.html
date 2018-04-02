@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.previous {
+    align-items: center;
+    background-color: gray;
+    color: black;
+}
+
+.next {
+
+    background-color: gray;
+    color: black;
+}
+
+.round {
+
+    border-radius: 50%;
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+</style>
+
+
+<div>
+    <a href="0" class="previous round">&#8249; </a>
+    <a href="1" class="next round">&#8250;</a>
+</div>
+
+<div>
+    <p style="text-align: center">id:  {{ data.id }}</p>
+    <p style="text-align: center">{{ data.Title }}</p>
+    <p style="text-align: center">{{ data.SubTitle }}</p>
+    <img src= {{data.ImageUrl}} alt="MountainView" width="300" height="300" class="center">
+</div>
+
+
+
+{% endblock content %}

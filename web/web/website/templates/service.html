@@ -1,0 +1,67 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<style>
+a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.previous {
+    align-items: center;
+    background-color: gray;
+    color: black;
+}
+
+.next {
+
+    background-color: gray;
+    color: black;
+}
+
+.round {
+
+    border-radius: 50%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+</style>
+
+
+    <div>
+     <a class="center" href="http://127.0.0.1:8000/index/service/to_airklass">
+       <input type="button" value="에어클래스로 가기" />
+    </a>
+
+    <a href="http://127.0.0.1:8000/index/service/to_login">
+       <input type="button" value="강의 개설하기" />
+    </a>
+    </div>
+    <div>
+        {% for s in data %}
+            <p style="text-align: center">{{ s.text1}} </p>
+            <p style="text-align: center">{{ s.text2}} </p>
+            <p style="text-align: center">{{ s.id}} </p>
+            <img src="/static/mini.jpg" alt="Happy" class="center">
+    </div>
+
+
+    {% endfor %}
+{% endblock content %}

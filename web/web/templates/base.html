@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    font-size: 25px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 40px 40px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: gray;
+}
+
+</style>
+
+
+
+<ul>
+      <li><a href="http://127.0.0.1:8000/index/contact">Contact</a></li>
+      <li><a href="http://127.0.0.1:8000/index/recruit">Recruit</a></li>
+      <li><a href="http://127.0.0.1:8000/index/service">Service</a></li>
+      <li><a href="http://127.0.0.1:8000/index/home/0">Home</a></li>
+</ul>
+
+{% block content %}
+{% endblock content %}
+
+</body>
+</html>
